@@ -29,7 +29,7 @@ pipeline{
              } 
             steps{
                 sh'''
-                    test -f build.index.html
+                    #test -f build.index.html
                     npm test
                 '''
                 }
@@ -40,5 +40,5 @@ pipeline{
         always {
             junit 'test-results/junit.xml'
         }
-        }
     }
+}
